@@ -1,0 +1,115 @@
+      
+      {
+        "pagination": {
+          "currentPage": 2,
+          "totalPages": 3,
+          "perPage": 10
+        },
+        "latestLyrics": [
+        {
+        "movie": {
+          "title": "The Matrix",
+          "release_date": "1999-03-31",
+          "director": "Wachowski Bros",
+          "genre": "Sci-Fi",
+          "poster":"https://placehold.co/600x400/orange/gray"
+        },
+        "song": {
+          "title": "Wake Up Lorem asdasda",
+          "artist": "Rage Against the Machine",
+          "duration": "5:39"
+        },
+        "lyrics": {
+          "lyrics_text": "You've got the power to let power go...",
+          "language": "English"
+        },
+        "category": {
+          "category_name": "Action"
+        },
+        "tags": [
+          {
+            "tag_name": "Exciting"
+          },
+          {
+            "tag_name": "Emotional"
+          }
+        ],
+        "user_comments": [
+          {
+            "user_id": 1,
+            "username": "user1",
+            "comment_text": "Great song!",
+            "timestamp": "2023-08-18T12:30:00Z"
+          }
+        ]
+      },
+      {
+        "movie": {
+          "title": "Inception",
+          "release_date": "2010-07-16",
+          "director": "Christopher Nolan",
+          "genre": "Sci-Fi, Action",
+          "poster":"https://placehold.co/600x400/orange/white"
+        },
+        "song": {
+          "title": "Time",
+          "artist": "Hans Zimmer",
+          "duration": "4:35"
+        },
+        "lyrics": {
+          "lyrics_text": "Lyrics for the song 'Time'...",
+          "language": "Instrumental"
+        },
+        "category": {
+          "category_name": "Sci-Fi"
+        },
+        "tags": [
+          {
+            "tag_name": "Epic"
+          }
+        ],
+        "user_comments": [
+          {
+            "user_id": 2,
+            "username": "user2",
+            "comment_text": "This is amazing!",
+            "timestamp": "2023-08-18T14:45:00Z"
+          }
+        ]
+      },
+      {
+        "movie": {
+          "title": "Inception",
+          "release_date": "2010-07-16",
+          "director": "Christopher Nolan",
+          "genre": "Sci-Fi, Action",
+          "poster":"https://placehold.co/600x400/orange/white"
+        },
+        "song": {
+          "title": "Time",
+          "artist": "Hans Zimmer",
+          "duration": "4:35"
+        },
+        "lyrics": {
+          "lyrics_text": "Lyrics for the song 'Time'...",
+          "language": "Instrumental"
+        },
+        "category": {
+          "category_name": "Sci-Fi"
+        },
+        "tags": [
+          {
+            "tag_name": "Epic"
+          }
+        ],
+        "user_comments": [
+          {
+            "user_id": 2,
+            "username": "user2",
+            "comment_text": "This is amazing!",
+            "timestamp": "2023-08-18T14:45:00Z"
+          }
+        ]
+      }
+    ]}
+   

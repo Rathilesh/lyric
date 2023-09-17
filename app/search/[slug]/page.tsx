@@ -1,24 +1,25 @@
+import { LatestLyric } from "@/app/types/latestLyrics";
 import Pagination from "@/components/Pagination";
 import Search from "@/components/Search";
 import SongCard from "@/components/SongCard";
-import { LatestLyric } from "./types/latestLyrics";
 
-async function getData() {
-  return await fetch("http://localhost:3000/api/lyrics/latest", {
+async function getData({ slug }: { slug: string }) {
+  return await fetch(`http://localhost:3000/api/lyrics/latest/${slug}`, {
     cache: "no-store",
   })
     .then((data) => data.json())
-    .then((res) => res?.data);
+    .then((res) => res.data);
 }
 
-export default async function Home() {
-  const data = await getData();
+export default async function Home({ params }: { params: { slug: string } }) {
+  const data = await getData(params);
   return (
     <div className="flex flex-col">
+      {JSON.stringify(params)}
       <Search />
-      <Pagination pagination={data?.pagination} title="Latest Lyrics" />
+      <Pagination pagination={data.pagination} title="Searched Results" />
       <main className="w-full transition pt-2 pr-4 h-auto grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
-        {data?.latestLyrics.map((lyrics: LatestLyric, key: number) => (
+        {data.latestLyrics.map((lyrics: LatestLyric, key: number) => (
           <>
             {key % 2 == 0 && (
               <div className="col-span-1 sm:col-span-2 md:col-span-2">
@@ -27,11 +28,11 @@ export default async function Home() {
                 </div>
               </div>
             )}
-            <SongCard key={lyrics?.lyrics.lyrics_text} data={lyrics} />
+            <SongCard key={lyrics.lyrics.lyrics_text} data={lyrics} />
           </>
         ))}
       </main>
-      <Pagination pagination={data?.pagination} title="Latest Lyrics" />
+      <Pagination pagination={data.pagination} title="Searched Results" />
     </div>
   );
 }
