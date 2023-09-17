@@ -5,7 +5,7 @@ import SongCard from "@/components/SongCard";
 
 async function getData({ slug }: { slug: [] }) {
   return await fetch(
-    `http://localhost:3000/api/lyrics/latest/${slug.join("/")}`,
+    `https://lyric-wine.vercel.app/api/lyrics/latest/${slug.join("/")}`,
     {
       cache: "no-store",
     }

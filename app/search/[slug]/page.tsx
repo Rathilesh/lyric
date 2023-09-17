@@ -4,9 +4,12 @@ import Search from "@/components/Search";
 import SongCard from "@/components/SongCard";
 
 async function getData({ slug }: { slug: string }) {
-  return await fetch(`http://localhost:3000/api/lyrics/latest/${slug}`, {
-    cache: "no-store",
-  })
+  return await fetch(
+    `https://lyric-wine.vercel.app/api/lyrics/latest/${slug}`,
+    {
+      cache: "no-store",
+    }
+  )
     .then((data) => data.json())
     .then((res) => res.data);
 }

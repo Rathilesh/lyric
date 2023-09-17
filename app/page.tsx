@@ -4,7 +4,7 @@ import SongCard from "@/components/SongCard";
 import { LatestLyric } from "./types/latestLyrics";
 
 async function getData() {
-  return await fetch("http://localhost:3000/api/lyrics/latest", {
+  return await fetch("https://lyric-wine.vercel.app/api/lyrics/latest", {
     cache: "no-store",
   })
     .then((data) => data.json())
